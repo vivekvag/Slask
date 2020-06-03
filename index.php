@@ -65,7 +65,6 @@ if (isset($_GET['complete_task'])) {
 
 // reset the tasks
 if (isset($_GET['reset_task'])) {
-  $id = $_GET['reset_task'];
   mysqli_query($db,"DELETE FROM tasks where email = '$email' ");
   mysqli_query($db2,"DELETE FROM completedtask where email ='$email' ");
   header('location: index.php');
@@ -149,19 +148,20 @@ $recenttask = mysqli_query($db2, "SELECT * FROM completedtask where email ='$ema
   <div class="row">
     <div class="col-md-10">
       <!-- form class -->
-      <form class="list-group shadow-sm" action="index.php" method="post">
+      <form id="formID" class="list-group shadow-sm" action="index.php" method="post">
 
-        <?php if (isset($errors)) { ?>
-          <p class="badges"><?php echo $errors; ?></p>
-        <?php } ?>
+      <?php if (isset($errors)) { ?>
+        <p class="badges"><?php echo $errors; ?></p>
+      <?php } ?>
 
-        <input type="text" class="form-control form-control-lg shadow input-type" name="task" placeholder="What's your Next task?">
-      </div>
-      <div class="col-md-2 d-flex ">
-        <button type="submit" class="btn btn-primary mt-3 shadow-sm" name="submit" data-toggle="tooltip" data-placement="top" title="Add New Task">Add Task</button>
-      </div>
-    </form>
-  </div>
+      <input type="text" id="task" class="form-control form-control-lg shadow input-type" name="task" placeholder="What's your Next task?">
+    </div>
+    <div class="col-md-2 d-flex ">
+      <!-- <input type="submit" id="myButton" name="submit"> -->
+      <button type="submit" id="add-task" class="btn btn-primary mt-3 shadow-sm" name="submit" data-toggle="tooltip" data-placement="top" title="Add New Task">Add Task</button>
+    </div>
+  </form>
+</div>
 </div>
 <!-- Form part Ends here -->
 
@@ -213,11 +213,11 @@ $recenttask = mysqli_query($db2, "SELECT * FROM completedtask where email ='$ema
             <?php echo $row['date']; ?>
           </tr>
           <?php $i++; } ?>
-    </tbody>
-  </table>
+        </tbody>
+      </table>
 
       <!-- Reset Button -->
-      <a href="index.php?reset_task=<?php echo $row['id']; ?>">
+      <a href="index.php?reset_task">
         <button  class="btn btn-outline-danger mt-3" name="reset" data-toggle="tooltip" data-placement="top" title="Reset">Reset All</button>
       </a>
       <div class="text-muted small">
@@ -236,58 +236,13 @@ $recenttask = mysqli_query($db2, "SELECT * FROM completedtask where email ='$ema
       <!-- Footer -->
       <?php include 'footer.php'; ?>
 
-      <!-- AJAX Function starts Here -->
-      <!-- <script>
-      $(document).ready(function() {
-      $('#butsave').on('click', function() {
-      $("#butsave").attr("disabled", "disabled");
-      let name = $('#name').val();
-      let email = $('#email').val();
-      let phone = $('#phone').val();
-      let city = $('#city').val();
-      if(name!="" && email!="" && phone!="" && city!=""){
-      $.ajax({
-      url: "save.php",
-      type: "POST",
-      data: {
-      name: name,
-      email: email,
-      phone: phone,
-      city: city
-    },
-    cache: false,
-    success: function(dataResult){
-    let dataResult = JSON.parse(dataResult);
-    if(dataResult.statusCode==200){
-    $("#butsave").removeAttr("disabled");
-    $('#fupForm').find('input:text').val('');
-    $("#success").show();
-    $('#success').html('Data added successfully !');
-  }
-  else if(dataResult.statusCode==201){
-  alert("Error occured !");
-}
+      <!-- darkMode -->
+      <script type="text/javascript" src="js/darkMode.js"></script>
 
-}
-});
-}
-else{
-alert('Please fill all the field !');
-}
-});
-});
-</script> -->
-
-
-
-<!-- AJAX Fucntion Ends Here -->
-
-<!-- darkMode -->
-<script type="text/javascript" src="js/darkMode.js"></script>
-
-<!-- BootStrap Links -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+      <!-- BootStrap Links -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
