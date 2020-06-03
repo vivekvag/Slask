@@ -66,9 +66,6 @@
   <div class="topnav" id="myTopnav">
     <a href="index.php" class="logo">
       <picture>
-        <source
-        srcset="assets/profile.svg"
-        media="(prefers-color-scheme: light)">
         <img src="assets/slask-logo.svg" alt="Slask-Logo" height="50px" width="150px">
       </picture>
     </a>
