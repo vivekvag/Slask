@@ -1,0 +1,107 @@
+:root {
+  --clr-light: #fff;
+  --clr-dark: #29292D;
+  --color-text: #222;
+  --navbar: #f6f6f6;
+  --navbar-hover: #ddd;
+  --odd-table: #fff;
+  --footer-color: #46474c;
+  --thead = --clr-light;
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+  --icon:url(https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1957&q=80);
+
+}
+
+.darkmode {
+  --clr-light: #fff;
+  --clr-dark: #18191A;
+  --color-text: #e3e6e5;
+  --navbar: #232326;
+  --navbar-hover: #131319;
+  --old-table: #1e1f21;
+  --footer-color: #26272B;
+  --thead: #000;
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+  --icon:url(https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=814&q=80);
+}
+
+
+body {
+  background: var(--background);
+}
+
+.topnav{
+  background: var(--navbar);
+}
+
+.topnav a{
+  color: var(--color-text);
+}
+
+.topnav a:hover{
+  background-color: var(--navbar-hover);
+}
+
+.topnav .logo:hover {
+  background-color: transparent;
+}
+
+.topnav a.active:hover{
+  background-color: #2782dd;
+}
+
+.table-design tr:nth-child(even) {
+  background-color: var(--navbar-hover);
+}
+
+.table-design tr:nth-child(odd) {
+  background-color: var(--old-table);
+}
+
+.thead-color tr > th {
+  background-color: var(--thead);
+}
+
+h1, h2, h3, h4, h5, h6, th,td, span, .container{
+  color: var(--color-text);
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 3.5em;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.dark-mode-toggle:hover{
+  border:none;
+  transform: scale(1.13);
+}
+
+svg{
+  display: flex;
+}
+
+.footer-class{
+  background-color: var(--footer-color);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}

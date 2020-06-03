@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* Some vars */
+@import url(https://fonts.googleapis.com/css?family=Sanchez:400italic,400);
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+.title{
+  text-transform: capitalize;
+  font-family: "Lobster", cursive;
+  font-size: 44px;
+  margin: 15px;
+  text-align: center;
+  animation: title-fade 1.2s ease-in;
+  animation-fill-mode: forwards;
+}
+.dash {
+	width: 150px;
+	height: 4px;
+	background-color: #3f51b5;
+	border-radius:  5px;
+	margin-bottom: 18px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+}
+
+.quote-icon{
+  color: #BFBFBF;
+  position: absolute;
+  left:0;
+  top: 0;
+  font-size: 22px;
+  animation: font-icon 0.4s linear ;
+  animation-fill-mode: both;
+}
+
+.ludwig {
+  font-size: 30px;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  margin-left: 5px;
+  animation: ludwig-fade 0.6s ease-in-out ;
+  animation-fill-mode: both;
+}
+
+cite{
+  font-family: 'Italianno', cursive;
+  font-size: 1.6rem;
+  animation: cite-fade 0.8s ease-in-out 1.6s ;
+  animation-fill-mode: both;
+
+}
+
+cite:before {
+  content: "- ";
+}
+
+@keyframes ludwig-fade {
+  from{transform: translateY(25px);}
+  to{transform: translateY(0);}
+}
+@keyframes cite-fade {
+  from{transform: skewX(30deg);}
+  to{transform: skewX(0deg);}
+}
+@keyframes title-fade {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes font-icon {
+  from{transform: rotateZ(180deg); opacity: 0.7;}
+  to{transform: rotateZ(0deg); opacity: 1;}
+}
+
+@media (max-width: 800px) {
+  .title{
+    font-size: 32px;
+  }
+   .ludwig {
+    font-size: 20px;
+  }
+
+  cite{
+    font-size: 1.23rem;
+  }
+
+  .quote-icon{
+    font-size: 12px;
+  }
+
+}

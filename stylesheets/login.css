@@ -1,0 +1,91 @@
+body{
+  background: #96adcc;
+}
+.login-form {
+  width: 385px;
+  margin: 50px auto;
+}
+.login-form form {
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+.avatar img{
+  height: 100px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.login-form h2 {
+  color: #636363;
+  margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+}
+.login-form h2:before, .login-form h2:after{
+  content: "";
+  height: 2px;
+  width: 30%;
+  background: #d4d4d4;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.login-form h2:before{
+  left: 0;
+}
+.login-form h2:after{
+  right: 0;
+}
+.form-control, .login-btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+.input-group-addon .fa {
+  font-size: 18px;
+}
+.login-btn {
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.social-btn .btn {
+  border: none;
+  margin: 10px 3px 0;
+  opacity: 1;
+}
+.social-btn .btn:hover {
+  opacity: 0.85;
+}
+.social-btn .btn-primary {
+  background: #507cc0;
+}
+.social-btn .btn-info {
+  background: #64ccf1;
+}
+.social-btn .btn-danger {
+  background: #df4930;
+}
+.or-seperator {
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.or-seperator i {
+  padding: 0 10px;
+  background: #f7f7f7;
+  position: relative;
+  top: -11px;
+  z-index: 1;
+}
+.bottom-class{
+  color:white;
+}
+.bottom-class a{
+  color: white;
+  text-decoration: underline;
+}
+.bottom-class a:hover{
+  font-size: 16px;
+}

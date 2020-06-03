@@ -1,0 +1,23 @@
+body{
+  font-family: 'Merriweather', sans-serif;
+}
+
+/* .main-header{
+  font-family: 'Seoge UI',sans-serif;
+} */
+
+header > div{
+  font-family: 'Bitter', serif;
+}
+
+.font-type{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.table-design{
+  font-family: 'Bitter', serif;
+}
+
+.input-type::placeholder{
+  opacity: 0.4;
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* Some vars */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Sanchez:400italic,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+.groucho {
+  position: relative;
+  font-family: "Sanchez", serif;
+  font-size: 2.4em;
+  line-height: 1.5em;
+}
+.groucho footer {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.6em;
+  font-weight: 700;
+  color: #d3d3cf;
+  float: right;
+}
+.groucho footer:before {
+  content: "―";
+}
+.groucho:after {
+  content: "”";
+  position: absolute;
+  top: 0.28em;
+  right: 0;
+  font-size: 6em;
+  font-style: italic;
+  color: #e7e6e4;
+  z-index: -1;
+}
+
+blockquote {
+  margin-bottom: 3em;
+}
+
+/*# sourceMappingURL=qstyle.css.map */
