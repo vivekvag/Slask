@@ -1,0 +1,26 @@
+
+# Create Database name - slask 
+
+CREATE TABLE `tasks` (
+  `id` int(11) NOT NULL,
+  `task` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `date` varchar(50) NOT NULL
+)
+
+
+
+CREATE TABLE `userdata` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(15) NOT NULL,
+  `last_name` varchar(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+);
+
+
+CREATE TABLE `completedtask` (
+  `id` int(11) NOT NULL,
+  `task` varchar(60) NOT NULL,
+  `email` varchar(50) NOT NULL
+);
