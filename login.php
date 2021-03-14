@@ -12,6 +12,7 @@
 
 </head>
 <body>
+<!-- Login Div Form -->
   <div class="login-form">
     <form action="login.php" method="post">
       <?php include('errors.php'); ?>
